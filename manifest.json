@@ -1,1 +1,17 @@
-
+{
+ "manifest_version": 2,
+ "name": "Vikidia-addons",
+ "description": "Un addon pour améliorer l'éxperience sur Vikidia", // La description
+ "version": "1.0",
+ "permissions":
+  "http://*/*",
+  "https://*/*",
+ ],
+ "browser_action": {   // Les paramètres
+  "default_icon" : "img/icon.png", // L'icône qui s'affiche en haut à droite de votre navigateur
+  "default_popup": "popup.html" // Le popup qui s'affichera quand vous cliquez sur l'îcone
+ },
+ "icons": { // L'îcone qui s'affichera lorse que vous êtes sur la page extensions des paramètre
+  "128" : "images/icon_128.png" // 128 = 128x128 la taille de votre image
+ }
+}
