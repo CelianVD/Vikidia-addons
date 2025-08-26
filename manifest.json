@@ -1,19 +1,25 @@
 {
- "manifest_version": 2,
- "name": "Vikidia-addons",
- "description": "Un addon pour améliorer l'éxperience sur Vikidia", // La description
- "version": "1.0",
- "permissions": [
-  "http://*/*",
-  "https://*/*",
-      "tabs"
-      "notifications"
- ],
- "browser_action": {   // Les paramètres
-  "default_icon" : "img/icon.png", // L'icône qui s'affiche en haut à droite de votre navigateur
-  "default_popup": "popup.html" // Le popup qui s'affichera quand vous cliquez sur l'îcone
- },
- "icons": { // L'îcone qui s'affichera lorse que vous êtes sur la page extensions des paramètre
-  "128" : "images/icon_128.png" // 128 = 128x128 la taille de votre image
- }
+  "manifest_version": 2,
+  "name": "Vikidia Addons",
+  "description": "Un addon pour améliorer l'expérience sur Vikidia",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "notifications",
+    "http://*.vikidia.org/*",
+    "https://*.vikidia.org/*"
+  ],
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "Vikidia": "images/icon_Vikidia.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.vikidia.org/*"],
+      "js": ["inject.js"]
+    }
+  ]
 }
