@@ -3,9 +3,10 @@
  "name": "Vikidia-addons",
  "description": "Un addon pour améliorer l'éxperience sur Vikidia", // La description
  "version": "1.0",
- "permissions":
+ "permissions": [
   "http://*/*",
   "https://*/*",
+      "tabs"
  ],
  "browser_action": {   // Les paramètres
   "default_icon" : "img/icon.png", // L'icône qui s'affiche en haut à droite de votre navigateur
